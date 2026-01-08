@@ -1,0 +1,262 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Family - Syasya Zarisya</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: Poppins, Helvetica, sans-serif;
+      background: linear-gradient(to right, #fdfaf6, #e6f0ff, #ffe6f0);
+      color: #333;
+      margin: 0;
+      position: relative;
+    }
+
+    /* Background circles */
+    body::before {
+      content:''; position: fixed; width: 200px; height: 200px;
+      background: rgba(90,141,177,0.1); border-radius: 50%;
+      top: 50px; left: 30px; z-index:0;
+    }
+    body::after {
+      content:''; position: fixed; width: 300px; height: 300px;
+      background: rgba(255,105,180,0.08); border-radius: 50%;
+      bottom: 50px; right: 50px; z-index:0;
+    }
+
+    nav {
+      background-color: #f0f8ff;
+      padding: 14px 12px;
+      text-align: center;
+      border-bottom: 2px solid #ccc;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      margin: 0 14px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.5;
+      transition: color 0.3s ease;
+    }
+    nav a:hover { color: #5a8db1; }
+
+    .container {
+      position: relative; 
+      z-index: 1;
+      max-width: 960px;
+      margin: 50px auto;
+      padding: 40px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    /* CLOCK */
+    #clock {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #708090;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      background: linear-gradient(90deg, #5a8db1, #ff69b4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+
+    .divider {
+      width: 80px; height: 2.5px; background: #5a8db1;
+      margin: 12px auto 40px; border-radius: 2px;
+    }
+
+    /* Section styling */
+    .section {
+      display: flex;
+      align-items: center;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      margin: 10px;
+    }
+
+    .section-text {
+      flex: 1;
+      padding: 20px;
+      min-width: 280px;
+      line-height: 1.6;
+      text-align: justify; 
+    }
+
+    .section-text h2 {
+      font-size: 28px;
+      margin-bottom: 12px;
+      color: #4682B4;
+    }
+
+    .section-text ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .section-text ul li {
+      margin-bottom: 6px;
+    }
+
+    /* Full family grid */
+    .full-family-grid {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .full-family-grid img {
+      width: 220px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    footer {
+      background-color: #f0f8ff;
+      text-align: center;
+      padding: 15px;
+      border-top: 2px solid #ccc;
+      margin-top: 50px;
+      font-size: 14px;
+      color: #000; 
+    }
+
+    footer a {
+      color: #5a8db1;
+      text-decoration: none;
+      margin: 0 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="biodata.html">Biodata</a>
+  <a href="education.html">Education</a>
+  <a href="experience.html">Experience</a>
+  <a href="family.html">Family</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="transformation.html">Transformation</a>
+</nav>
+
+<div class="container">
+
+  <div id="clock"></div>
+
+  <h1>Meet My Family</h1>
+  <div class="divider"></div>
+
+  <!-- Full Family Pictures (3 images bersebelahan) -->
+  <div class="section fade-in" style="flex-direction: column; text-align: center;">
+    <div class="full-family-grid">
+      <img src="family1.jpg" alt="Full Family 1">
+      <img src="family2.jpg" alt="Full Family 2">
+      <img src="family3.jpg" alt="Full Family 3">
+    </div>
+    <div class="section-text">
+      <p>This is my family, the people who make life unpredictable, fun, and full of love. From early mornings to late nights, from busy workdays to lazy weekends at home, every moment with them is a story in itself. My dad inspires me with his dedication, my mom shows me love in the smallest gestures, and my siblings turn ordinary days into adventures. We laugh, argue, plan, and share quiet moments, and every experience shapes who I am. Looking at these pictures, I see more than faces. I see support, encouragement, and inspiration. They are my foundation, my safe place, and my motivation to grow and explore. Life with them is never perfect, but always meaningful, and I wouldn’t trade it for anything.</p>
+    </div>
+  </div>
+
+  <!-- Parents Section -->
+  <div class="section fade-in" style="flex-direction: row;">
+    <img src="parents.jpg" alt="My Parents">
+    <div class="section-text">
+      <h2>My Parents</h2>
+      <p>My dad, Mohd Zarir Bin Mohd Mosleh (45), is a supervisor at Westport. When he’s not at work, he still finds time to run his food business, showing us what commitment looks like.</p>
+      <p>My mom, Salmi Binti Zakariya (43), is a homemaker who keeps our family together with her care and love. She once worked as an teacher, but after my third sibling was born she decided to focus on raising us.</p>
+      <p>Their love and sacrifices inspire me every day, and I’m grateful to have them by my side.</p>
+    </div>
+  </div>
+
+  <!-- Siblings Section -->
+  <div class="section fade-in" style="flex-direction: row-reverse;">
+    <img src="siblings.jpg" alt="My Siblings">
+    <div class="section-text">
+      <h2>My Siblings</h2>
+      <p>We may share the same name (yes, all of us are Syasya), but each of us has our own personality, quirks, and role in the family.</p>
+      <p>From left to right in the photo:</p>
+      <ul>
+        <li><strong>Syasya Zarisya – Eldest (me!)</strong>: As the eldest, I'm usually keeping things calm and making sure eveyone feels included.</li>
+        <li><strong>Syasya Syahzananie – Second child</strong>: Talkative and full of energy. She's also the one who loves cooking and experimenting in the kitchen.</li>
+        <li><strong>Syasya Nur Insyirah – Third child</strong>: Shy and sensitive. She prefers quiet moments and doing her own thing.</li>
+        <li><strong>Syasya Izz Zahra – Youngest</strong>: Cheerful and active. She practices taekwondo and proudly holds a orange belt.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Syasya Zarisya. All rights reserved.</p>
+  <p>
+    <a href="mailto:syasyazarisya@gmail.com"><i class="fas fa-envelope"></i> Email</a> |
+    <a href="https://www.instagram.com/syzranuckelz" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> |
+    <a href="https://www.tiktok.com/@fav0rysya" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+  </p>
+</footer>
+
+<script>
+  // Clock
+  function updateClock() {
+    const now = new Date();
+    const h = String(now.getHours()).padStart(2,'0');
+    const m = String(now.getMinutes()).padStart(2,'0');
+    const s = String(now.getSeconds()).padStart(2,'0');
+    document.getElementById('clock').textContent = `${h}:${m}:${s}`;
+  }
+  setInterval(updateClock,1000);
+  updateClock();
+
+  // Fade-in on scroll
+  const faders = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {threshold: 0.2});
+  faders.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
+

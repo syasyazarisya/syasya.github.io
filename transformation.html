@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Transformation Story - Syasya Zarisya</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Font & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: Poppins, Helvetica, sans-serif;
+      background: linear-gradient(to right, #fdfaf6, #e6f0ff, #ffe6f0);
+      color: #333;
+      margin: 0;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Floating background shapes */
+    body::before {
+      content:'';
+      position: fixed;
+      width: 200px; height: 200px;
+      background: rgba(90,141,177,0.1);
+      border-radius: 50%;
+      top: 50px; left: 30px;
+      z-index:0;
+    }
+    body::after {
+      content:'';
+      position: fixed;
+      width: 300px; height: 300px;
+      background: rgba(255,105,180,0.08);
+      border-radius: 50%;
+      bottom: 50px; right: 50px;
+      z-index:0;
+    }
+
+    /* NAVBAR */
+    nav {
+      background-color: #f0f8ff;
+      padding: 14px 12px;
+      text-align: center;
+      border-bottom: 2px solid #ccc;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      margin: 0 14px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.5;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #5a8db1;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 960px;
+      margin: 50px auto;
+      padding: 40px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      position: relative;
+      z-index: 1;
+    }
+
+    #clock {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #708090;
+      text-align: center;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      background: linear-gradient(90deg, #5a8db1, #ff69b4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+
+    .divider {
+      width: 80px;
+      height: 2.5px;
+      background: #5a8db1;
+      margin: 12px auto 40px;
+      border-radius: 2px;
+    }
+
+    .intro {
+      text-align: justify;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    /* Timeline & Sections */
+    .timeline {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 40px;
+    }
+
+    .timeline h2 {
+      text-align: center;
+      font-size: 24px;
+      color: #5a8db1;
+    }
+
+    .timeline ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .timeline li {
+      margin: 15px 0;
+      font-size: 18px;
+      background: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+    }
+
+    .timeline li::before {
+      content: "✔️";
+      margin-right: 10px;
+      font-size: 22px;
+      color: #5a8db1;
+    }
+
+    /* Lifestyle Changes */
+    .lifestyle {
+      background: #f9f9f9;
+      padding: 40px;
+      border-radius: 12px;
+      margin-top: 40px;
+    }
+
+    .lifestyle h2 {
+      text-align: center;
+      font-size: 24px;
+      color: #5a8db1;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .lifestyle-box {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); 
+      gap: 20px;
+      padding-top: 20px;
+    }
+
+    .lifestyle-item {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .lifestyle-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .lifestyle-item i {
+      font-size: 40px;
+      color: #5a8db1;
+      margin-bottom: 10px;
+    }
+
+    .lifestyle-item h3 {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .lifestyle-item p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #f0f8ff;
+      text-align: center;
+      padding: 15px 10px;
+      border-top: 2px solid #ccc;
+      font-size: 14px;
+      color: #333;
+      margin-top: 50px;
+    }
+    footer a {
+      color: #5a8db1;
+      text-decoration: none;
+      margin: 0 6px;
+    }
+
+    /* Message Style */
+    .message {
+      margin-top: 40px;
+      text-align: center; 
+      font-style: italic;
+      font-size: 15px;
+      color: #5a8db1;
+      position: relative;
+    }
+
+    .message p {
+      max-width: 800px;
+      margin: 0 auto; 
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      color: #333;
+      padding: 20px;
+    }
+
+    /* Gallery Styling */
+    .gallery {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+
+    figure {
+      text-align: center;
+      margin: 0;
+    }
+
+    figure img {
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    figure:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    figcaption {
+      padding-top: 10px;
+      font-size: 16px;
+      text-align: center;
+      color: #555;
+    }
+
+    figcaption h3 {
+      font-size: 18px;
+      text-align: center;
+      color: #5a8db1;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="biodata.html">Biodata</a>
+  <a href="education.html">Education</a>
+  <a href="experience.html">Experience</a>
+  <a href="family.html">Family</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="transformation.html">Transformation</a>
+</nav>
+
+<!-- CONTAINER -->
+<div class="container">
+  <!-- DIGITAL CLOCK -->
+  <div id="clock"></div>
+
+  <h1>My Transformation Story</h1>
+  <div class="divider"></div>
+
+  <!-- Intro -->
+  <p class="intro">
+    I used to feel invisible. People would laugh at me because of my weight and every comment made my confidence drop. I hated how I looked, and I avoided mirrors. But in December 2024, I decided it was time to take control. I wanted to prove to myself that I could change. It is not for anyone else, but for me.
+  </p>
+
+  <!-- Before & After -->
+  <div class="gallery">
+    <figure>
+      <img src="before.jpg" alt="Before Image" width="300" height="400">
+      <figcaption>
+        <h3>Before (82 kg)</h3>
+        <p>I got tired just climbing the stairs, struggled to move freely, and avoided looking in mirrors.</p>
+      </figcaption>
+    </figure>
+    
+    <figure>
+      <img src="after.jpg" alt="After Image" width="300" height="400">
+      <figcaption>
+        <h3>After (61 kg)</h3>
+        <p>I finally feel energetic and proud of what I’ve accomplished.
+        I can play, run and even smile at my reflection without shame.</p>
+      </figcaption>
+    </figure>
+  </div>
+
+  <!-- Timeline -->
+  <div class="timeline">
+    <h2>Timeline of My Journey</h2>
+    <ul>
+      <li>Late Dec 2024: I cut sugar and sweet drinks completely and drank more water. It felt like a big change, but I was determined to start fresh.</li>
+      <li>Jan–Mar 2025:  I started cycling indoors and walks regularly. Some days were exhausting, but I felt proud every time I hopped on the bike.</li>
+      <li>Apr–Jun 2025: Meal prep became my new best friend. Controlling portions was tricky, but slowly, I got the hang of it.</li>
+      <li>Jul–Dec 2025: Consistency was everything. Even on tough days, I stuck to my routines. And finally, I reached 60kg.</li>
+    </ul>
+  </div>
+
+  <!-- Lifestyle Changes -->
+  <div class="lifestyle">
+    <h2>Lifestyle Changes</h2>
+    <div class="lifestyle-box">
+      <div class="lifestyle-item">
+        <i class="fas fa-apple-alt"></i>
+        <h3>Healthy Eating</h3>
+        <p>More fruits, vegetables, and clean protein. Goodbye junk food!.</p>
+      </div>
+      <div class="lifestyle-item">
+        <i class="fas fa-bicycle"></i>
+        <h3>Active Lifestyle</h3>
+        <p>Indoor cycling, brisk walking, and light workouts that became fun rather than a chore.</p>
+      </div>
+      <div class="lifestyle-item">
+        <i class="fas fa-bed"></i>
+        <h3>Sleep</h3>
+        <p>Prioritized 6 hours every night because it made a huge difference.</p>
+      </div>
+      <div class="lifestyle-item">
+        <i class="fas fa-brain"></i>
+        <h3>Mindset</h3>
+        <p>Focus on the process, celebrate small wins, and love yourself every step of the way.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- My Message to Everyone -->
+  <div class="My message">
+    <p>𝙉𝙚𝙫𝙚𝙧 𝙡𝙚𝙩 𝙥𝙚𝙤𝙥𝙡𝙚'𝙨 𝙬𝙤𝙧𝙙𝙨 𝙙𝙚𝙛𝙞𝙣𝙚 𝙮𝙤𝙪𝙧 𝙬𝙤𝙧𝙩𝙝. 𝙔𝙤𝙪𝙧 𝙟𝙤𝙪𝙧𝙣𝙚𝙮 𝙞𝙨 𝙮𝙤𝙪𝙧𝙨 𝙩𝙤 𝙨𝙝𝙖𝙥𝙚.</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Syasya Zarisya. All rights reserved.</p>
+  <p>
+    <a href="mailto:syasyazarisya@gmail.com"><i class="fas fa-envelope"></i> Email</a> |
+    <a href="https://www.instagram.com/syzranuckelz" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> |
+    <a href="https://www.tiktok.com/@fav0rysya" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+  </p>
+</footer>
+
+<!-- Clock Script -->
+<script>
+  function updateClock() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    const time = `${hours}:${minutes}:${seconds}`;
+    document.getElementById("clock").innerText = time;
+  }
+
+  setInterval(updateClock, 1000);  // update clock every second
+  updateClock();  // initial call to display the time immediately
+</script>
+
+</body>
+</html>

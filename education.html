@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Syasya Zarisya – Education</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Pacifico&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: Poppins, Helvetica, sans-serif;
+      background: linear-gradient(to right, #fdfaf6, #e6f0ff, #ffe6f0);
+      margin: 0;
+      color: #333;
+      position: relative;
+    }
+
+    /* Background circles */
+    body::before {
+      content:''; position: fixed; width: 200px; height: 200px;
+      background: rgba(90,141,177,0.1); border-radius: 50%;
+      top: 50px; left: 30px; z-index:0;
+    }
+    body::after {
+      content:''; position: fixed; width: 300px; height: 300px;
+      background: rgba(255,105,180,0.08); border-radius: 50%;
+      bottom: 50px; right: 50px; z-index:0;
+    }
+
+    /* Navbar styling */
+    nav {
+      background-color: #f0f8ff;
+      padding: 17px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 2px solid #ccc;
+    }
+    nav a {
+      margin: 0 14px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 960px;
+      margin: 50px auto;
+      padding: 40px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    #clock {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #708090;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      background: linear-gradient(90deg, #5a8db1, #ff69b4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+
+    h1::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 2.5px;
+      background-color: #5a8db1;
+      margin: 10px auto 20px;
+    }
+
+    /* Fade-in effect for education section */
+    .edu-section {
+      background: #f5f9ff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+      margin-bottom: 40px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInFromBottom 1s ease-out forwards;
+    }
+
+    @keyframes fadeInFromBottom {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .edu-section h2 {
+      color: #5a8db1;
+      margin-bottom: 10px;
+    }
+
+    /* Table Styling - Equal Widths for Columns */
+    table {
+      width: 100%;
+      border-collapse: collapse; 
+      margin-bottom: 15px;
+    }
+
+    th, td {
+      border: 1px solid #ccc; 
+      padding: 12px;
+      text-align: center; 
+      width: 50%; 
+    }
+
+    .website-btn {
+      display: inline-block;
+      background: #ff69b4;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .photos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .photos img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    footer {
+      background-color: #f0f8ff;
+      text-align: center;
+      padding: 15px;
+      border-top: 2px solid #ccc;
+      font-size: 14px;
+    }
+
+    footer i { margin-right: 6px; }
+    footer a { color: #5a8db1; text-decoration: none; margin: 0 6px; }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="biodata.html">Biodata</a>
+  <a href="education.html">Education</a>
+  <a href="experience.html">Experience</a>
+  <a href="family.html">Family</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="transformation.html">Transformation</a>
+</nav>
+
+<div class="container">
+  <div id="clock"></div>
+  <h1>My Educational Journey</h1>
+
+  <!-- Kindergarten -->
+  <div class="edu-section">
+    <h2>Tadika Darul Ukhwah</h2>
+    <table>
+      <tr><th>Level</th><th>Year</th></tr>
+      <tr><td>Kindergarten</td><td>2010 – 2011</td></tr>
+    </table>
+    <a href="https://www.google.com/maps/place/Tadika+Darul+Ukhuwah%2FEhsan/data=!4m2!3m1!1s0x0:0xc4e535e3c7949efd?sa=X&ved=1t:2428&ictx=111" target="_blank" class="website-btn">
+      Visit School Maps
+    </a>
+    <div class="photos">
+      <img src="kindergarten2.jpg">
+      <img src="kindergarten.jpg">
+    </div>
+  </div>
+
+  <!-- Primary School -->
+  <div class="edu-section">
+    <h2>Sekolah Kebangsaan Sijangkang</h2>
+    <table>
+      <tr><th>Level</th><th>Year</th></tr>
+      <tr><td>Primary School</td><td>2012 – 2017</td></tr>
+    </table>
+    <a href="https://sksijangkang.weebly.com/profil-sekolah.html" target="_blank" class="website-btn">
+      Visit School Website
+    </a>
+    <div class="photos">
+      <img src="primaryschool1.jpg" alt="Primary School">
+      <img src="libraryprefect.jpg" alt="Library Prefect">
+    </div>
+  </div>
+
+  <!-- High School -->
+  <div class="edu-section">
+    <h2>Sekolah Menengah Kebangsaan Sijangkang Jaya</h2>
+    <table>
+      <tr><th>Level</th><th>Year</th></tr>
+      <tr><td>High School</td><td>2018 – 2022</td></tr>
+    </table>
+    <a href="https://www.google.com/maps/place/SMK+Sijangkang+Jaya/data=!4m2!3m1!1s0x0:0x77af444a713ae9e6?sa=X&ved=1t:2428&ictx=111" target="_blank" class="website-btn">
+      Visit School Maps
+    </a>
+    <div class="photos">
+      <img src="smk1.jpg">
+      <img src="smk2.jpg">
+    </div>
+  </div>
+
+  <!-- UiTM -->
+  <div class="edu-section">
+    <h2>Universiti Teknologi Mara (UiTM)</h2>
+    <table>
+      <tr><th>Level</th><th>Year</th></tr>
+      <tr><td>Diploma</td><td>2023 – Present</td></tr>
+    </table>
+    <a href="https://nsembilan.uitm.edu.my/rembau/" target="_blank" class="website-btn">
+      Visit University Website
+    </a>
+    <div class="photos">
+      <img src="uitm1.jpg">
+      <img src="uitm2.jpg">
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Syasya Zarisya. All rights reserved.</p>
+  <p>
+    <a href="mailto:syasyazarisya@gmail.com"><i class="fas fa-envelope"></i>Email</a> |
+    <a href="https://www.instagram.com/syzranuckelz" target="_blank"><i class="fab fa-instagram"></i>Instagram</a> |
+    <a href="https://www.tiktok.com/@fav0rysya" target="_blank"><i class="fab fa-tiktok"></i>TikTok</a>
+  </p>
+</footer>
+
+<script>
+  function updateClock() {
+    const now = new Date();
+    const h = String(now.getHours()).padStart(2,'0');
+    const m = String(now.getMinutes()).padStart(2,'0');
+    const s = String(now.getSeconds()).padStart(2,'0');
+    document.getElementById('clock').textContent = `${h}:${m}:${s}`;
+  }
+  setInterval(updateClock, 1000);
+  updateClock();
+</script>
+
+</body>
+</html>

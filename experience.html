@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Experience - Syasya Zarisya</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: Poppins, Helvetica, sans-serif;
+      background: linear-gradient(to right, #fdfaf6, #e6f0ff, #ffe6f0);
+      color: #333;
+      margin: 0;
+      position: relative;
+    }
+
+  
+    body::before {
+      content:''; position: fixed; width: 200px; height: 200px;
+      background: rgba(90,141,177,0.1); border-radius: 50%;
+      top: 50px; left: 30px; z-index:0;
+    }
+    body::after {
+      content:''; position: fixed; width: 300px; height: 300px;
+      background: rgba(255,105,180,0.08); border-radius: 50%;
+      bottom: 50px; right: 50px; z-index:0;
+    }
+
+    nav {
+      background-color: #f0f8ff;
+      padding: 14px 12px;
+      text-align: center;
+      border-bottom: 2px solid #ccc;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      margin: 0 14px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.5;
+      transition: color 0.3s ease;
+    }
+    nav a:hover { color: #5a8db1; }
+
+    .container {
+      position: relative; 
+      z-index: 1;
+      max-width: 960px;
+      margin: 50px auto;
+      padding: 40px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    #clock {
+      text-align: center; 
+      font-weight: bold; 
+      color: #708090;
+      margin-bottom: 20px; 
+      font-size: 18px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      background: linear-gradient(90deg, #5a8db1, #ff69b4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+
+    .divider {
+      width: 80px; height: 2.5px; background: #5a8db1;
+      margin: 12px auto 40px; border-radius: 2px;
+    }
+
+    /* Experience items styling */
+    .experience-item {
+      background: #f5f9ff; 
+      padding: 20px; 
+      border-radius: 16px; 
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+      margin-bottom: 30px; 
+      opacity: 0; 
+      transform: translateY(40px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .experience-item.visible {
+      opacity: 1; transform: translateY(0);
+    }
+
+    .experience-text {
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .experience-text ul {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+    .experience-text ul li {
+      margin-bottom: 6px;
+    }
+
+    
+    .experience-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .experience-images img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .experience-images img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #f0f8ff;
+      text-align: center;
+      padding: 15px;
+      border-top: 2px solid #ccc;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #5a8db1;
+      text-decoration: none;
+      margin: 0 6px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="biodata.html">Biodata</a>
+  <a href="education.html">Education</a>
+  <a href="experience.html">Experience</a>
+  <a href="family.html">Family</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="transformation.html">Transformation</a>
+</nav>
+
+<div class="container">
+
+  <div id="clock"></div>
+
+  <h1>My Experience</h1>
+  <div class="divider"></div>
+
+  <!-- Final Year Project -->
+  <div class="experience-item fade-in">
+    <div class="experience-text">
+      <h3>Final Year Project – Community Engagement</h3>
+      <p>
+        As part of my final year project, I was involved in the Program Sentuhan 
+        Komuniti Bestari 2025 held at Perpustakaan Desa Taman Intan Perdana,
+        Port Dickson. The program focused on community engagement and
+        knowledge sharing. As the Programme & Protocol Bureau, my responsibilities included:
+      </p>
+      <ul>
+        <li>Ensuring smooth program flow and protocol</li>
+        <li>Handling a checkpoint for the Trail of Knowledge activity</li>
+        <li>Setting up booths for the exhibition</li>
+        <li>Assisting with overall event management</li>
+      </p>
+      </ul>
+      This project provided me with valuable experience in organizational skills, teamwork, and protocol management during formal community events.
+    </div>
+    <div class="experience-images">
+      <img src="fyp1.jpg" alt="Event identity">
+      <img src="fyp2.jpg" alt="Programme & Protocol Bureau">
+      <img src="fyp3.jpg" alt="Team presentation">
+      <img src="fyp4.jpg" alt="Community engagement">
+    </div>
+  </div>
+
+  <!-- Internship -->
+  <div class="experience-item fade-in">
+    <div class="experience-text">
+      <h3>Internship – Pejabat Daerah dan Tanah Klang</h3>
+      <p>
+        During my internship, I was assigned to the ICT Unit, where I gained hands-on experience in supporting daily operations and technical services. My responsibilities included:
+      </p>
+      <ul>
+        <li>Digitizing physical records into digital formats</li>
+        <li>Preparing ICT equipment for meetings and programs</li>
+        <li>Designing and installing informational posters</li>
+        <li>Assisting with live streaming on Facebook</li>
+      </p>
+      </ul>
+        This internship provided me with valuable exposure to ICT-related workflows and highlighted the importance of accuracy and efficiency in administrative support.
+    </div>
+    <div class="experience-images">
+      <img src="ict1.jpg" alt="Data digitization">
+      <img src="ict2.jpg" alt="ICT equipment">
+      <img src="ict3.jpg" alt="Poster design">
+      <img src="ict4.jpg" alt="Live broadcast">
+    </div>
+  </div>
+
+  <!-- Merdeka Night Parade -->
+  <div class="experience-item fade-in">
+    <div class="experience-text">
+      <h3>Merdeka Night Parade – Selangor State</h3>
+      <p>
+        I proudly represented Pejabat Daerah dan Tanah Klang in the Selangor State Merdeka Night Parade, which was organised at the state level in conjunction with Malaysia’s Independence Day celebration. As part of the contingent, I participated in ceremonial formations together with representatives from various government departments. Prior to the event, several training and rehearsal sessions were conducted to ensure proper coordination, discipline, and uniformity among all participants.
+      </p>
+      </ul>
+        Through this experience, I learned the importance of teamwork, time management, and following instructions, as each participant played an important role in ensuring the success of the parade. Participating in this event also gave me valuable exposure to formal state functions and strengthened my sense of responsibility and pride in representing my internship department at a high-profile event.
+    
+    </div>
+    <div class="experience-images">
+      <img src="parade1.jpg" alt="Group photo">
+      <img src="parade2.jpg" alt="Marching participation">
+      <img src="parade3.jpg" alt="Contingent showcase">
+      <img src="parade4.jpg" alt="Parade action">
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Syasya Zarisya. All rights reserved.</p>
+  <p>
+    <a href="mailto:syasyazarisya@gmail.com"><i class="fas fa-envelope"></i> Email</a> |
+    <a href="https://www.instagram.com/syzranuckelz" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> |
+    <a href="https://www.tiktok.com/@fav0rysya" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+  </p>
+</footer>
+
+<script>
+  // Clock
+  function updateClock() {
+    const now = new Date();
+    const h = String(now.getHours()).padStart(2,'0');
+    const m = String(now.getMinutes()).padStart(2,'0');
+    const s = String(now.getSeconds()).padStart(2,'0');
+    document.getElementById('clock').textContent = `${h}:${m}:${s}`;
+  }
+  setInterval(updateClock,1000);
+  updateClock();
+
+  // Fade-in on scroll
+  const faders = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {threshold: 0.2});
+  faders.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Syasya Zarisya Personal Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: Poppins, Helvetica, sans-serif;
+      background: linear-gradient(to right, #fdfaf6, #e6f0ff, #ffe6f0);
+      color: #333;
+      margin: 0;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* FADE-IN ANIMATION */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInAnimation 1s forwards;
+    }
+
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    body::before {
+      content:'';
+      position: fixed;
+      width: 200px; height: 200px;
+      background: rgba(90,141,177,0.1);
+      border-radius: 50%;
+      top: 50px; left: 30px;
+      z-index:0;
+    }
+    body::after {
+      content:'';
+      position: fixed;
+      width: 300px; height: 300px;
+      background: rgba(255,105,180,0.08);
+      border-radius: 50%;
+      bottom: 50px; right: 50px;
+      z-index:0;
+    }
+
+    /* NAVBAR */
+    nav {
+      background-color: #f0f8ff;
+      padding: 14px 12px;
+      text-align: center;
+      border-bottom: 2px solid #ccc;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      margin: 0 14px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    nav a:hover {
+      color: #5a8db1;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 960px;
+      margin: 50px auto;
+      padding: 40px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* CLOCK */
+    #clock {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #708090;
+    }
+
+    /* TITLE */
+    h1 {
+      font-size: 36px;
+      background: linear-gradient(90deg, #5a8db1, #ff69b4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    h1::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: #5a8db1;
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+
+    /* FLOATING IMAGES */
+    .floating-images {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .floating-images img {
+      width: 160px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease;
+    }
+
+    .floating-images img:nth-child(1) { transform: translateY(10px); }
+    .floating-images img:nth-child(2) { transform: translateY(-10px); }
+    .floating-images img:nth-child(3) { transform: translateY(15px); }
+
+    .floating-images img:hover {
+      transform: translateY(-8px) scale(1.05);
+    }
+
+    ul {
+      list-style-type: square;
+      display: inline-block;
+      text-align: left;
+      padding-left: 20px;
+      margin-top: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .reveal-list li {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: all 0.6s ease;
+    }
+
+    .reveal-list li.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    footer {
+      background-color: #f0f8ff;
+      text-align: center;
+      padding: 20px 0;  
+      border-top: 2px solid #ccc;
+      font-size: 14px;
+      color: #333;
+    }
+
+    footer p {
+      margin: 10px 0;  
+    }
+
+    footer a {
+      color: #5a8db1;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      color: #ff69b4;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="biodata.html">Biodata</a>
+  <a href="education.html">Education</a>
+  <a href="experience.html">Experience</a>
+  <a href="family.html">Family</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="transformation.html">Transformation</a>
+</nav>
+
+<div class="container">
+  
+  <div id="clock"></div>
+
+  
+  <h1>Welcome to Syasya’s Personal Website</h1>
+
+  
+  <div class="floating-images fade-in">
+    <img src="syasya1.jpg" alt="Syasya photo 1">
+    <img src="syasya2.jpg" alt="Syasya photo 2">
+    <img src="syasya3.jpg" alt="Syasya photo 3">
+  </div>
+
+  <p class="fade-in">
+    Hello everyone! This personal website was developed as part of my individual assignment for the subject <strong style="color:#5a8db1;">IMD318: Introduction to Web Content Management & Design.</strong> The development of this website reflects my ability to apply the knowledge, concepts, and techniques learned in the subject in accordance with the learning outcomes and assessment guidelines.
+  </p>
+
+  <p class="fade-in">
+    Each section below is designed to give you a closer look at who I am, what I’ve experienced, and the memories that shape me.
+  </p>
+
+  <!-- Reveal List (scroll effect) -->
+  <ul class="reveal-list">
+    <li><strong>Home</strong> – welcome page & overview</li>
+    <li><strong>Biodata</strong> – a brief introduction about myself</li>
+    <li><strong>Education</strong> – my academic journey</li>
+    <li><strong>Experience</strong> – internship and student projects</li>
+    <li><strong>Family</strong> – a glimpse into the love and support behind me</li>
+    <li><strong>Gallery</strong> – a collection of memories</li>
+    <li><strong>Transformation</strong> – my journey of change in health and confidence</li>
+  </ul>
+
+  <p style="margin-top:25px;" class="fade-in">
+    Thank you for visiting my website!
+  </p>
+
+  
+  <audio controls>
+    <source src="song.mp3" type="audio/mp3">
+  </audio>
+
+</div>
+
+<footer>
+  <p>© 2026 Syasya Zarisya. All rights reserved.</p>
+  <p>
+    <a href="mailto:syasyazarisya@gmail.com"><i class="fas fa-envelope"></i> Email</a> |
+    <a href="https://www.instagram.com/syzranuckelz" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> |
+    <a href="https://www.tiktok.com/@fav0rysya" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+  </p>
+</footer>
+
+<script>
+  function updateClock() {
+    const now = new Date();
+    const h = String(now.getHours()).padStart(2,'0');
+    const m = String(now.getMinutes()).padStart(2,'0');
+    const s = String(now.getSeconds()).padStart(2,'0');
+    document.getElementById('clock').textContent = `${h}:${m}:${s}`;
+  }
+  setInterval(updateClock, 1000);
+  updateClock();
+
+  function revealListOnScroll() {
+    const items = document.querySelectorAll('.reveal-list li');
+    const windowHeight = window.innerHeight;
+
+    items.forEach((item, index) => {
+      const itemTop = item.getBoundingClientRect().top;
+      const revealPoint = 100;
+
+      if (itemTop < windowHeight - revealPoint) {
+        setTimeout(() => {
+          item.classList.add('active');
+        }, index * 150);
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealListOnScroll);
+  revealListOnScroll();
+</script>
+
+</body>
+</html>
